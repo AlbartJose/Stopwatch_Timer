@@ -31,8 +31,11 @@ export const CountTimer = () => {
 
   useEffect(() => {
     setCounter(sum(formData));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     sec = counter % 60;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     min = Math.floor(counter / 60) % 60;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     hour = Math.floor(counter / 3600) % 24;
   }, [formData]);
 
